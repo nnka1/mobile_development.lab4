@@ -8,7 +8,7 @@
 
 (кликабельно)
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/OIV_9opfMTw/default.jpg)](https://www.youtube.com/shorts/OIV_9opfMTw)
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/EwrKI5FLD90/default.jpg)](https://www.youtube.com/shorts/EwrKI5FLD90)
 
 ## 1. Обзор MainActivity
 
