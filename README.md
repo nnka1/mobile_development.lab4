@@ -36,14 +36,14 @@ MainActivity отвечает за:
 3. Обрабатывается ответ от сервера (см. раздел 4).
 
 Пример кода:
-``searchButton.setOnClickListener(v -> {
+`searchButton.setOnClickListener(v -> {
     String address = addressEditText.getText().toString();
     if (address.isEmpty()) {
         Toast.makeText(this, "Пожалуйста, введите адрес", Toast.LENGTH_SHORT).show();
         return;
     }
     findNearestPostOffice(address);
-}); ``
+}); `
 
 ## 4. Обработка ответа сервера
 
