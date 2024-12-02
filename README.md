@@ -36,14 +36,14 @@ MainActivity отвечает за:
 3. Обрабатывается ответ от сервера (см. раздел 4).
 
 Пример кода:
-```searchButton.setOnClickListener(v -> {
+``searchButton.setOnClickListener(v -> {
     String address = addressEditText.getText().toString();
     if (address.isEmpty()) {
         Toast.makeText(this, "Пожалуйста, введите адрес", Toast.LENGTH_SHORT).show();
         return;
     }
     findNearestPostOffice(address);
-}); ```
+}); ``
 
 ## 4. Обработка ответа сервера
 
@@ -65,7 +65,7 @@ MainActivity отвечает за:
             showError("Ошибка парсинга JSON");
         }
     }),
-    error -> showError("Ошибка сети или API: " + error.getMessage()));```
+    error -> showError("Ошибка сети или API: " + error.getMessage()));``
     
 ## 5. Взаимодействие с базой данных Room
 
@@ -87,7 +87,7 @@ MainActivity отвечает за:
                 result -> showMessage("Адрес сохранен!"),
                 error -> showError("Ошибка сохранения адреса!")
             ));
-}```
+}``
 
 ## 6. Использование Volley и адаптера
 
