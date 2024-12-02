@@ -92,6 +92,7 @@ MainActivity отвечает за:
 ## 6. Использование Volley и адаптера
 
 • Volley: Используется для отправки HTTP-запросов к API Dadata.
+
 • PostOfficeAdapter: Отображает данные в ListView. Может отображать как результаты поиска, так и сохраненные адреса.
 
 ## 7. Управление состоянием приложения
@@ -103,8 +104,11 @@ MainActivity отображает сообщения об ошибках и ус
 Обработка нажатий кнопок осуществляется через setOnClickListener:
 
 • searchButton: Вызывает findNearestPostOffice.
+
 • savedAddressesButton: Вызывает showSavedAddresses.
+
 • clearButton: Вызывает clearDatabase.
+
 • Кнопка "Сохранить" в PostOfficeAdapter: Вызывает saveAddress в MainActivity.
 
   
