@@ -11,7 +11,7 @@
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/EwrKI5FLD90/default.jpg)](https://www.youtube.com/shorts/EwrKI5FLD90)
 
 ## 1. Обзор MainActivity
-![]((https://github.com/nnka1/mobile_development.lab4/blob/main/photo_2024-12-03_01-17-46.jpg))
+![](https://github.com/nnka1/mobile_development.lab4/blob/main/photo_2024-12-03_01-17-46.jpg)
 
 MainActivity отвечает за:
 
