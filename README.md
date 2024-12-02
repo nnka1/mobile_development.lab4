@@ -36,14 +36,16 @@ MainActivity отвечает за:
 3. Обрабатывается ответ от сервера (см. раздел 4).
 
 Пример кода:
-`searchButton.setOnClickListener(v -> {
+```
+searchButton.setOnClickListener(v -> {
     String address = addressEditText.getText().toString();
     if (address.isEmpty()) {
         Toast.makeText(this, "Пожалуйста, введите адрес", Toast.LENGTH_SHORT).show();
         return;
     }
     findNearestPostOffice(address);
-}); `
+});
+```
 
 ## 4. Обработка ответа сервера
 
@@ -54,7 +56,8 @@ MainActivity отвечает за:
 3. Обновление UI: Результаты поиска передаются в PostOfficeAdapter для обновления ListView. Обновление происходит в главном потоке с помощью runOnUiThread.
 
 Пример кода:
-``JsonObjectRequest request = new JsonObjectRequest(Request.Method.POST, url, jsonBody,
+```
+JsonObjectRequest request = new JsonObjectRequest(Request.Method.POST, url, jsonBody,
     response -> runOnUiThread(() -> {
         try {
             // Парсинг JSON и обновление адаптера
@@ -65,7 +68,8 @@ MainActivity отвечает за:
             showError("Ошибка парсинга JSON");
         }
     }),
-    error -> showError("Ошибка сети или API: " + error.getMessage()));``
+    error -> showError("Ошибка сети или API: " + error.getMessage()));
+```
     
 ## 5. Взаимодействие с базой данных Room
 
@@ -76,7 +80,8 @@ MainActivity отвечает за:
 • Очистка базы данных (clearDatabase): Очищает базу данных.
 
 Пример кода (фрагмент - saveAddress):
-``public void saveAddress(String address) {
+```
+public void saveAddress(String address) {
     disposables.add(addressDatabase.addressDao().getAddressIfExists(address)
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
@@ -87,7 +92,8 @@ MainActivity отвечает за:
                 result -> showMessage("Адрес сохранен!"),
                 error -> showError("Ошибка сохранения адреса!")
             ));
-}``
+}
+```
 
 ## 6. Использование Volley и адаптера
 
